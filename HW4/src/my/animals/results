@@ -1,0 +1,14 @@
+-----------Output results sample-----------------
+
+Dog Spike has run 250 meters !
+Cat Fido has run 189 meters !
+Dog cannot swim more than 10 meters !
+Dog Pluto has swum 10 meters !
+Dog cannot run more than 500 meters !
+Dog Bobik has run 499 meters !
+Cat cannot swim!
+Cat cannot run more than 200 meters !
+Cat Petty has run 125 meters !
+Total amount of animals is: 5
+Total amount of cats is: 2
+Total amount of dogs is: 3
