@@ -1,0 +1,42 @@
+---------------------Output results sample--------------------------------------
+A participant Cat Fido has run 24.22 meters.
+A participant [Fido] has overcome an obstacle [Treadmill] at the distance [15.0] meters
+
+A participant Cat Fido has jumped 1.7 meters high
+A participant [Fido] has overcome an obstacle [Wall] at the distance [0.8] meters
+
+A participant Cat Fido has run 61.68 meters.
+A participant [Fido] has overcome an obstacle [Treadmill] at the distance [23.0] meters
+
+A participant Cat Fido has jumped 1.03 meters high
+A participant [Fido] has not overcome and obstacle [Wall] at the distance [1.2] meters. Has passed [1.03] meters.
+
+A participant Person John has run 17.45 meters.
+A participant [John] has overcome an obstacle [Treadmill] at the distance [15.0] meters
+
+A participant Person John has jumped 0.97 meters high
+A participant [John] has overcome an obstacle [Wall] at the distance [0.8] meters
+
+A participant Person John has run 31.79 meters.
+A participant [John] has overcome an obstacle [Treadmill] at the distance [23.0] meters
+
+A participant Person John has jumped 2.18 meters high
+A participant [John] has overcome an obstacle [Wall] at the distance [1.2] meters
+
+A participant Person John has run 55.43 meters.
+A participant [John] has overcome an obstacle [Treadmill] at the distance [35.0] meters
+
+A participant Person John has jumped 1.35 meters high
+A participant [John] has not overcome and obstacle [Wall] at the distance [1.6] meters. Has passed [1.35] meters.
+
+A participant Robot Sirius has run 41.58 meters.
+A participant [Sirius] has overcome an obstacle [Treadmill] at the distance [15.0] meters
+
+A participant Robot Sirius has jumped 1.87 meters high
+A participant [Sirius] has overcome an obstacle [Wall] at the distance [0.8] meters
+
+A participant Robot Sirius has run 50.88 meters.
+A participant [Sirius] has overcome an obstacle [Treadmill] at the distance [23.0] meters
+
+A participant Robot Sirius has jumped 1.15 meters high
+A participant [Sirius] has not overcome and obstacle [Wall] at the distance [1.2] meters. Has passed [1.15] meters.
