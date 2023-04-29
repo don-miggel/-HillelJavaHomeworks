@@ -1,0 +1,17 @@
+---------------Guess Game output sample 1--------------------------
+
+Guess word
+garlic
+#####i#########
+Guess word
+apricot
+p##p#i#########
+Guess word
+kiwi
+p##pki#########
+Guess word
+mushroom
+pumpki#########
+Guess word
+lemon
+You are right. Guessed word was: pumpkin
