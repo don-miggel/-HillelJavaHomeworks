@@ -1,0 +1,8 @@
+Given array is: [[12, 13, 17, 1], [5, 36, 77, 9], [83, 19, 71, 0]]
+ArraySizeException: Your array has invalid length: 3. Proper length should be: 4
+
+Given array is: [[1, 17, 25, 10], [12, 13, 17, 3], [l, 36, 77, 1], [83, 19, 71, 0]]
+ArrayDataException: Value: 'l' at row: 2,column: 0 cannot be cast to Integer!
+
+Given array is: [[1, 17, 25, 10], [12, 13, 17, 3], [5, 36, 77, 1], [83, 19, 71, 0]]
+Total sum is: 390
