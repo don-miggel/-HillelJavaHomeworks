@@ -1,0 +1,10 @@
+FILE:src/log_files/log2.txt
+LEVEL: DEBUG
+MAX-SIZE: 500
+FORMAT: [%s][%s]-[%s]
+
+
+
+
+
+
