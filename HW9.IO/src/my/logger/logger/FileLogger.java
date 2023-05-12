@@ -1,6 +1,8 @@
-package my.logger;
+package my.logger.logger;
 
+import my.logger.LoggingLevel;
 import my.logger.config.FileLoggerConfiguration;
+import my.logger.config.LoggerConfiguration;
 import my.logger.exceptions.FileMaxSizeReachedException;
 import my.logger.utils.FileParser;
 
@@ -15,26 +17,24 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Arrays;
 
-public class FileLogger {
+public class FileLogger extends Logger {
 
-    private final FileLoggerConfiguration config;
-
-    public FileLogger(FileLoggerConfiguration config) {
-        this.config = config;
+    public FileLogger(LoggerConfiguration config) {
+        super(config);
     }
 
     public void debug(String msg) {
-        if (config.getLoggingLevel().equals(LoggingLevel.INFO))
+        if (getConfig().getLoggingLevel().equals(LoggingLevel.INFO))
             return;
-        logData(msg, "DEBUG");
+        logDataToFile(msg, String.valueOf(LoggingLevel.DEBUG));
     }
 
     public void info(String msg) {
 
-        logData(msg, "INFO");
+        logDataToFile(msg, String.valueOf(LoggingLevel.INFO));
     }
 
-    private void logData(String msg, String level) {
+    private void logDataToFile(String msg, String level) {
         // In this try section, we check exceeding of the max size
         // In case of it being occurred, we handle an exception, thrown by checkFileSize() method
         // and create a new file in the createNewFile() method
@@ -45,9 +45,10 @@ public class FileLogger {
             System.out.println(e.getMessage());
         }
         // Create formatted string here, which will be written into a log file
-        String formattedData = String.format(config.getLoggingFormat(), LocalDateTime.now(), level, "Message: " + msg);
+        String formattedData = String.format(getConfig().getLoggingFormat(), LocalDateTime.now(), level, "Message: " + msg);
+        System.out.println(getConfig().getLoggingFormat()+"form data");
         // Get path of the log file
-        Path logFilePath = Path.of(config.getFilePath());
+        Path logFilePath = Path.of(((FileLoggerConfiguration)getConfig()).getFilePath());
         File myFile = new File(logFilePath.toUri());
 
         // In this try section we write data to the opened file, we append data to the end of the file
@@ -89,10 +90,11 @@ public class FileLogger {
 
         boolean isExceed;
         try {
-            long currentSize = Files.size(Path.of(config.getFilePath()));
-            isExceed = currentSize >= config.getMaxFileSize();
+            long currentSize = Files.size(Path.of(((FileLoggerConfiguration)getConfig()).getFilePath()));
+            isExceed = currentSize >= ((FileLoggerConfiguration)getConfig()).getMaxFileSize();
             if (isExceed)
-                throw new FileMaxSizeReachedException(config.getMaxFileSize(), (int) currentSize, config.getFilePath());
+                throw new FileMaxSizeReachedException(((FileLoggerConfiguration)getConfig()).getMaxFileSize(),
+                        (int) currentSize, ((FileLoggerConfiguration)getConfig()).getFilePath());
         } catch (IOException e) {
             System.out.println(e);
         }
@@ -105,7 +107,7 @@ public class FileLogger {
      */
     private void createNewFile() {
         // get current log file path
-        String currentFilePath = config.getFilePath();
+        String currentFilePath = ((FileLoggerConfiguration)getConfig()).getFilePath();
         // extract path without file
         currentFilePath = currentFilePath.substring(0, currentFilePath.lastIndexOf('/') + 1);
         String timeFileCreated = LocalTime.now().toString();
@@ -114,9 +116,9 @@ public class FileLogger {
         // create filename for new log file
         String fileName = "Log_" + LocalDate.now() + " " + timeFileCreated + ".txt";
         // set new path
-        config.setFilePath(currentFilePath + fileName);
+        ((FileLoggerConfiguration)getConfig()).setFilePath(currentFilePath + fileName);
         // replace logging file with a new file by updating path
-        FileParser.replaceTextInFile(config.getFileConfigPath(), "FILE", config.getFilePath(), ':');
-        System.out.println("New file: " + config.getFilePath() + " created!");
+        FileParser.replaceTextInFile(getConfig().getFileConfigPath(), "FILE", ((FileLoggerConfiguration)getConfig()).getFilePath(), ':');
+        System.out.println("New file: " + ((FileLoggerConfiguration)getConfig()).getFilePath() + " created!");
     }
 }

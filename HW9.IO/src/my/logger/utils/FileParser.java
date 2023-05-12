@@ -1,5 +1,7 @@
 package my.logger.utils;
 
+import my.logger.logger.FileLogger;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -60,6 +62,22 @@ public class FileParser {
         String parsedText = openAndParseFile(file, separator);
 
         return parseString(parsedText, separator);
+    }
+
+    // overload getDataFromFile method especially for usage in the StdoutLoggerConfigurationLoader class
+    // since, we don't have to use such keys as MAX-SIZE and FILE for storing current logging file path
+    public static String[] getDataFromFile(File file, char separator, String...keys){
+        String[] values = new String[keys.length];
+        String dataFromFile = openAndParseFile(file, separator);
+        int counter = 0;
+        for(String key : keys){
+            if (dataFromFile.contains(key)){
+                dataFromFile = dataFromFile.substring(dataFromFile.indexOf(key));
+                values[counter++] = dataFromFile.substring(dataFromFile.indexOf(key)+key.length()+1,
+                        dataFromFile.indexOf('\n')).trim();
+            }
+        }
+        return values;
     }
 
     private static int countSeparator(String str, char sep) {
