@@ -1,0 +1,5 @@
+First first occurance of the last name 'Doe': Record{name='John Doe', phone='+380951111122'}
+Find all records by last name 'Doe': [Record{name='John Doe', phone='+380951111122'}, Record{name='Rick Doe', phone='+380660000022'}]
+Find first record by name Rick:Record{name='Rick Doe', phone='+380660000022'}
+Find all records by name Rick: [Record{name='Rick Doe', phone='+380660000022'}, Record{name='Rick Johnson', phone='+380970000033'}]
+Find by all records containing 'John': [Record{name='John Doe', phone='+380951111122'}, Record{name='John Johnson', phone='+380970000011'}, Record{name='Rick Johnson', phone='+380970000033'}, Record{name='Nick Johnson', phone='+380970000044'}]

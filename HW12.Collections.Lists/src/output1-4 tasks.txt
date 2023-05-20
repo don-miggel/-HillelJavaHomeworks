@@ -1,0 +1,14 @@
+Number of word 'Java' in the list: 3
+String List: [Java, C#, Go, Ruby]
+Float List: [0.1, 0.3, 0.7, 0.9]
+Unique elements: [0.1, 0.2, 3, 0, 1, 5, 7]
+Java: 4
+C#: 3
+Java Script: 1
+Python: 1
+Go: 1
+Kotlin: 1
+Ruby: 1
+C++: 1
+
+[Occurance{numOccur=4, word='Java'}, Occurance{numOccur=3, word='C#'}, Occurance{numOccur=1, word='Java Script'}, Occurance{numOccur=1, word='Python'}, Occurance{numOccur=1, word='Go'}, Occurance{numOccur=1, word='Kotlin'}, Occurance{numOccur=1, word='Ruby'}, Occurance{numOccur=1, word='C++'}]
