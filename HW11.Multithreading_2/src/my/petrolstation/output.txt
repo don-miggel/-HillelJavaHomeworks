@@ -1,0 +1,7 @@
+Tank volume is 350 liters
+Car#5 fuels with 90.0 liters There is 135.0 liters left, tank fueling lasts for 7 seconds
+Car#2 fuels with 75.0 liters There is 135.0 liters left, tank fueling lasts for 8 seconds
+Car#1 fuels with 50.0 liters There is 135.0 liters left, tank fueling lasts for 9 seconds
+Car#6 fuels with 80.0 liters There is 55.0 liters left, tank fueling lasts for 9 seconds
+The tank is empty!
+The tank is empty!
