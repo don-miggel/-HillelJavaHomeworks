@@ -1,0 +1,35 @@
+New order 1 | Chris was created
+New order 2 | Nelly was created
+New order 3 | Jim was created
+New order 4 | Billy was created
+Num | Name
+1 | Chris
+2 | Nelly
+3 | Jim
+4 | Billy
+
+Num | Name
+1 | Chris
+2 | Nelly
+4 | Billy
+
+Num | Name
+2 | Nelly
+4 | Billy
+
+New order 5 | Ted was created
+New order 6 | Paul was created
+Num | Name
+2 | Nelly
+4 | Billy
+5 | Ted
+6 | Paul
+
+Num | Name
+2 | Nelly
+4 | Billy
+6 | Paul
+
+Num | Name
+4 | Billy
+6 | Paul
