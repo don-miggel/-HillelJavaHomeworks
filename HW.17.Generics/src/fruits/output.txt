@@ -1,0 +1,9 @@
+Box is empty
+The box contains 3 apples
+The box contains 1 orange
+false
+true
+3.0
+The box contains 5 apples
+Box is empty
+The box contains 8 apples
