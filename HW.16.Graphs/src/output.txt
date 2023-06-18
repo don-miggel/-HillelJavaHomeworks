@@ -1,0 +1,21 @@
+Please, enter a nonnegative numbers
+23
+72
+1
+0
+56
+87
+38
+41
+9
+-1
+Tree contains following numbers:
+0
+1
+9
+23
+38
+41
+56
+72
+87 
