@@ -1,0 +1,16 @@
+Exec method with annotation: BeforeSuite
+Document prepared
+Exec method with priority: 8
+Document received
+Exec method with priority: 7
+Document signed
+Exec method with priority: 6
+Document approved
+Exec method with priority: 5
+Document attached
+Exec method with priority: 4
+Document fulfilled
+Exec method with priority: 3
+Document sent
+Exec method with annotation: AfterSuite
+Document archived
