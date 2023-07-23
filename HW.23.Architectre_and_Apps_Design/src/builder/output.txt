@@ -1,0 +1,22 @@
+-------------VOLVO SELECTED SPECS INCLUDED------------
+The car brand is: Volvo
+The car vin is: V0111111
+The car is of light brown color
+The car has 5 doors
+The car current route is: No route was set up yet
+The car has 5 seats
+The car type is: CUV
+Car{vin: V0111111, brand: Volvo, carType: CUV, seats number: 5, doors number: 5, engine: null, transmission: null, gpsNavigator: GPSNavigator{route='No route was set up yet'}, fuel level: 0.0, mileage level: 0.0}
+-------------SKODA ALL SPECS INCLUDED------------
+The car brand is: Skoda
+The car is of white color
+The car type is: SEDAN
+The car has 4 doors
+The car current route is: No route was set up yet
+The car is provided with Engine{volume: 2.0, fuel Type: GASOLINE, cylinder number: 4, was engine started: false}
+The car has 4 seats
+The car vin is: SO222222
+The car is provided with CarBattery{carBatteryType=LITHIUM_ION, capacity=66, brand='Skoda'}
+The car is provided with Transmission{speedNumber=7, transmissionType=AUTOMATIC}
+The wheel producer: Pirelli
+Car{vin: SO222222, brand: Skoda, carType: SEDAN, seats number: 4, doors number: 4, engine: Engine{volume: 2.0, fuel Type: GASOLINE, cylinder number: 4, was engine started: false}, transmission: Transmission{speedNumber=7, r: 4, was engine started: false}, transmission: Transmission{speedNumber=7, transmissionType=AUTOMATIC}, gpsNavigator: GPSNavigator{route='No route was set up yet'}, fuel level: 0.0, mileage level: 0.0}
