@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileLoggerConfigurationLoader.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">HW24-Maven</a> &gt; <a href="index.source.html" class="el_package">logging.loader</a> &gt; <span class="el_source">FileLoggerConfigurationLoader.java</span></div><h1>FileLoggerConfigurationLoader.java</h1><pre class="source lang-java linenums">package logging.loader;
+
+
+import logging.config.FileLoggerConfiguration;
+import logging.config.LoggerConfiguration;
+import logging.exceptions.FileConfigurationKeysMismatchException;
+import logging.utils.FileParser;
+
+import java.io.File;
+
+import java.nio.file.InvalidPathException;
+import java.nio.file.Path;
+import java.util.Arrays;
+
+import java.util.Set;
+
+
+<span class="fc" id="L18">public class FileLoggerConfigurationLoader implements LoggerConfigurationLoader {</span>
+
+<span class="fc" id="L20">    private final static Set&lt;String&gt; REQUIRED_KEYS = Set.of(&quot;file&quot;, &quot;level&quot;, &quot;max-size&quot;, &quot;format&quot;);</span>
+
+    public LoggerConfiguration load(String file) throws IllegalArgumentException, FileConfigurationKeysMismatchException{
+<span class="fc bfc" id="L23" title="All 4 branches covered.">        if(file == null || file.trim().length() == 0) throw new IllegalArgumentException();</span>
+<span class="fc" id="L24">        Path configFile = Path.of(file);</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        if(!new File(configFile.toUri()).exists())</span>
+<span class="fc" id="L26">            throw new InvalidPathException(configFile.toString(), &quot;wrong path&quot;);</span>
+        // since our file has a ':' separator of key/value pairs, we pass it as a second param
+<span class="fc" id="L28">        String[] keys = FileParser.getKeys(new File(configFile.toUri()),':');</span>
+
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if(!verifyKeys(keys, REQUIRED_KEYS))</span>
+<span class="fc" id="L31">            throw new FileConfigurationKeysMismatchException(REQUIRED_KEYS);</span>
+<span class="fc" id="L32">        String[] configData = FileParser.getDataFromFile(new File(configFile.toUri()), ':');</span>
+
+        // our config array should have the same length as an amount of fields in the FileLoggerConfigurationLoader class
+<span class="fc" id="L35">        System.out.println(Arrays.toString(LoggerConfiguration.class.getDeclaredFields()));</span>
+
+<span class="fc" id="L37">        return new FileLoggerConfiguration(configFile.toString(), configData);</span>
+
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

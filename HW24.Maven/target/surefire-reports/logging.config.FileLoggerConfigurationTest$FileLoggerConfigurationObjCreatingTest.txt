@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: logging.config.FileLoggerConfigurationTest$FileLoggerConfigurationObjCreatingTest
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.118 s -- in logging.config.FileLoggerConfigurationTest$FileLoggerConfigurationObjCreatingTest

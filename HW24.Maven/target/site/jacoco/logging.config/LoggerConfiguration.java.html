@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LoggerConfiguration.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">HW24-Maven</a> &gt; <a href="index.source.html" class="el_package">logging.config</a> &gt; <span class="el_source">LoggerConfiguration.java</span></div><h1>LoggerConfiguration.java</h1><pre class="source lang-java linenums">package logging.config;
+
+import logging.LoggingLevel;
+
+import java.util.Objects;
+
+public abstract class LoggerConfiguration {
+
+    protected String loggingFormat;
+    protected LoggingLevel loggingLevel;
+    protected String fileConfigPath;
+
+<span class="fc" id="L13">    public LoggerConfiguration(String loggingLevel, String loggingFormat, String fileConfigPath){</span>
+<span class="fc" id="L14">        setLoggingLevel(loggingLevel);</span>
+<span class="fc" id="L15">        setLoggingFormat(loggingFormat);</span>
+<span class="fc" id="L16">        setFileConfigPath(fileConfigPath);</span>
+<span class="fc" id="L17">    }</span>
+
+    public String getLoggingFormat() {
+<span class="fc" id="L20">        return loggingFormat;</span>
+    }
+
+    public void setLoggingFormat(String loggingFormat) {
+<span class="fc bfc" id="L24" title="All 4 branches covered.">        if (loggingFormat == null || loggingFormat.trim().isEmpty()) throw new IllegalArgumentException();</span>
+
+<span class="fc" id="L26">        this.loggingFormat = loggingFormat;</span>
+<span class="fc" id="L27">    }</span>
+
+    public LoggingLevel getLoggingLevel() {
+<span class="fc" id="L30">        return loggingLevel;</span>
+    }
+
+    public void setLoggingLevel(String loggingLevel) {
+<span class="fc bfc" id="L34" title="All 4 branches covered.">        if (loggingLevel == null || loggingLevel.trim().isEmpty()) throw new IllegalArgumentException();</span>
+<span class="fc bfc" id="L35" title="All 4 branches covered.">        if (loggingLevel.equals(&quot;DEBUG&quot;) || loggingLevel.equals(&quot;INFO&quot;)) {</span>
+<span class="fc" id="L36">            this.loggingLevel = LoggingLevel.valueOf(loggingLevel);</span>
+<span class="fc" id="L37">            return;</span>
+        }
+        // if user gives a wrong logging level, which is neither DEBUG nor INFO, set &quot;INFO&quot; by default
+<span class="fc" id="L40">        this.loggingLevel = LoggingLevel.INFO;</span>
+<span class="fc" id="L41">    }</span>
+
+    public String getFileConfigPath() {
+<span class="nc" id="L44">        return fileConfigPath;</span>
+    }
+
+    public void setFileConfigPath(String fileConfigPath) {
+<span class="fc" id="L48">        this.fileConfigPath = fileConfigPath;</span>
+<span class="fc" id="L49">    }</span>
+
+    @Override
+    public boolean equals(Object o) {
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (this == o) return true;</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        if (!(o instanceof LoggerConfiguration)) return false;</span>
+<span class="fc" id="L55">        LoggerConfiguration that = (LoggerConfiguration) o;</span>
+<span class="pc bpc" id="L56" title="2 of 6 branches missed.">        return Objects.equals(loggingFormat, that.loggingFormat) &amp;&amp; loggingLevel == that.loggingLevel &amp;&amp; Objects.equals(fileConfigPath, that.fileConfigPath);</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="fc" id="L61">        return Objects.hash(loggingFormat, loggingLevel, fileConfigPath);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

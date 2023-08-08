@@ -1,0 +1,9 @@
+LEVEL: INFO
+FORMAT: [%s][%s]-[%s]
+EXT: .pdf
+
+
+
+
+
+

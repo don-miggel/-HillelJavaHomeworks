@@ -1,0 +1,13 @@
+logging\loader\FileLoggerConfigurationLoaderTest$loadConfigTestClass.class
+logging\config\StdoutLoggerConfigurationTest.class
+math\MathClassTest$TestPowMethod.class
+math\MathClassTest.class
+logging\config\FileLoggerConfigurationTest.class
+logging\loader\FileLoggerConfigurationLoaderTest.class
+logging\config\FileLoggerConfigurationTest$FileLoggerConfigurationObjCreatingTest.class
+math\MathClassTest$SqrtTesting.class
+logging\config\StdoutLoggerConfigurationTest$StdoutLoggerConfigurationTesting.class
+logging\loader\StdoutLoggerConfigurationLoaderTest.class
+logging\loader\StdoutLoggerConfigurationLoaderTest$TestStdoutConfLoader.class
+math\MathClassTest$TestAbs.class
+math\MathClassTest$TestFactMethod.class
