@@ -1,0 +1,15 @@
+logging\loader\LoggerConfigurationLoader.class
+logging\config\LoggerConfiguration.class
+logging\loader\StdoutLoggerConfigurationLoader.class
+logging\config\StdoutLoggerConfiguration.class
+math\MathClass.class
+logging\exceptions\FileMaxSizeReachedException.class
+logging\Main.class
+logging\config\FileLoggerConfiguration.class
+logging\exceptions\FileConfigurationKeysMismatchException.class
+logging\loader\FileLoggerConfigurationLoader.class
+logging\logger\FileLogger.class
+logging\logger\Logger.class
+logging\logger\StdoutLogger.class
+logging\utils\FileParser.class
+logging\LoggingLevel.class

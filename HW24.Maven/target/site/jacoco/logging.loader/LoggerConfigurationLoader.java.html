@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LoggerConfigurationLoader.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">HW24-Maven</a> &gt; <a href="index.source.html" class="el_package">logging.loader</a> &gt; <span class="el_source">LoggerConfigurationLoader.java</span></div><h1>LoggerConfigurationLoader.java</h1><pre class="source lang-java linenums">package logging.loader;
+
+import logging.config.LoggerConfiguration;
+
+import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public interface LoggerConfigurationLoader {
+
+
+    LoggerConfiguration load(String file) throws FileNotFoundException;
+
+    default boolean verifyKeys(String[] checkedKeys, Set&lt;String&gt; requiredKeys){
+
+<span class="fc" id="L19">        Set&lt;String&gt; reqKeys = new HashSet&lt;&gt;(requiredKeys);</span>
+<span class="fc" id="L20">        Set&lt;String&gt; givenKeys = Arrays.stream(checkedKeys)</span>
+<span class="fc" id="L21">                .filter(Objects::nonNull)</span>
+<span class="fc" id="L22">                .map(String::toLowerCase)</span>
+<span class="fc" id="L23">                .collect(Collectors.toSet());</span>
+<span class="fc" id="L24">        reqKeys.removeAll(givenKeys);</span>
+<span class="fc" id="L25">        givenKeys.removeAll(requiredKeys);</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        return reqKeys.size() ==  givenKeys.size();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+HW24-Maven,logging.config,StdoutLoggerConfiguration,0,24,0,0,0,5,0,3,0,3
+HW24-Maven,logging.config,FileLoggerConfiguration,1,146,2,16,0,25,2,17,0,10
+HW24-Maven,logging.config,LoggerConfiguration,3,116,2,20,1,23,3,17,1,8
+HW24-Maven,logging,LoggingLevel,0,15,0,0,0,3,0,1,0,1
+HW24-Maven,logging,Main,23,0,0,0,7,0,2,0,2,0
+HW24-Maven,logging.logger,FileLogger,227,0,8,0,50,0,10,0,6,0
+HW24-Maven,logging.logger,StdoutLogger,57,0,2,0,10,0,4,0,3,0
+HW24-Maven,logging.logger,Logger,9,0,0,0,4,0,2,0,2,0
+HW24-Maven,logging.loader,LoggerConfigurationLoader,0,32,0,2,0,8,0,2,0,1
+HW24-Maven,logging.loader,StdoutLoggerConfigurationLoader,0,80,0,8,0,11,0,7,0,3
+HW24-Maven,logging.loader,FileLoggerConfigurationLoader,0,77,0,8,0,12,0,7,0,3
+HW24-Maven,math,MathClass,0,80,0,16,0,18,0,13,0,5
+HW24-Maven,logging.exceptions,FileConfigurationKeysMismatchException,0,5,0,0,0,2,0,1,0,1
+HW24-Maven,logging.exceptions,FileMaxSizeReachedException,7,0,0,0,2,0,1,0,1,0
+HW24-Maven,logging.utils,FileParser,66,201,4,16,17,41,5,13,2,6
