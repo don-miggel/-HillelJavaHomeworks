@@ -1,0 +1,18 @@
+2023-09-07 22:14:59,925  INFO [main] CoffeeOrderBoard - Client Dave has made a new order with an order number 1
+2023-09-07 22:14:59,927  INFO [main] CoffeeOrderBoard - Dispaying all orders
+2023-09-07 22:15:06,891  INFO [main] CoffeeOrderBoard - Client Mick has made a new order with an order number 2
+2023-09-07 22:15:06,891  INFO [main] CoffeeOrderBoard - Dispaying all orders
+2023-09-07 22:15:12,314  INFO [main] CoffeeOrderBoard - Client Roger has made a new order with an order number 3
+2023-09-07 22:15:12,314  INFO [main] CoffeeOrderBoard - Dispaying all orders
+2023-09-07 22:15:17,521  INFO [main] CoffeeOrderBoard - Client Ivan has made a new order with an order number 4
+2023-09-07 22:15:17,522  INFO [main] CoffeeOrderBoard - Dispaying all orders
+2023-09-07 22:15:22,496  INFO [main] CoffeeOrderBoard - Dispaying all orders
+2023-09-07 22:15:30,421  INFO [main] CoffeeOrderBoard - Order with a number 1 was given to a client Dave
+2023-09-07 22:15:34,865  INFO [main] CoffeeOrderBoard - Dispaying all orders
+2023-09-07 22:15:43,238 ERROR [main] CoffeeOrderBoard - hw29.logging.exceptions.OrderNotFoundException: Order with number 5 was not found
+2023-09-07 22:15:50,595  INFO [main] CoffeeOrderBoard - Order with a number 2 was given to a client Mick
+2023-09-07 22:15:54,145  INFO [main] CoffeeOrderBoard - Dispaying all orders
+2023-09-07 22:15:58,047  INFO [main] CoffeeOrderBoard - Order with a number 3 was given to a client Roger
+2023-09-07 22:16:01,353  INFO [main] CoffeeOrderBoard - Dispaying all orders
+2023-09-07 22:16:04,851  INFO [main] CoffeeOrderBoard - Order with a number 4 was given to a client Ivan
+2023-09-07 22:16:07,288  INFO [main] CoffeeOrderBoard - Dispaying all orders
