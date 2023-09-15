@@ -53,7 +53,7 @@ public class ProductServiceDefault implements UIOperations{
                     selectedId = scInt.nextInt();
                     cart.addProduct(selectedId);
                     cart.displayProdsInCart();
-                    System.out.println("Do you want to add another product ? Choose Y to add or any other symbol to checkout");
+                    System.out.println("Do you want to make another operation ? Choose Y to proceed or any other symbol to checkout");
                     String continueChoice = scString.nextLine();
                     if(continueChoice.toLowerCase().equals("y"))
                         cart.displayProdsInCart();
@@ -66,7 +66,6 @@ public class ProductServiceDefault implements UIOperations{
                     System.out.println("Please, select a product id to remove from cart: ");
                     selectedId = scInt.nextInt();
                     cart.removeProduct(selectedId);
-                    cart.displayProdsInCart();
                     if(cart.isCartEmpty())
                         System.out.println("The cart is empty now...");
                     else
