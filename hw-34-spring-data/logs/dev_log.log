@@ -1,0 +1,1405 @@
+2023-09-28 16:28:28,149 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 9396 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 16:28:28,150 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 16:28:28,580 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 16:28:28,598 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JPA repository interfaces.
+2023-09-28 16:28:29,104 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 16:28:29,112 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 16:28:29,112 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 16:28:29,216 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 16:28:29,216 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1030 ms
+2023-09-28 16:28:29,288 WARN  [main] AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: ${DB_DRIVER}
+2023-09-28 16:28:29,291 INFO  [main] StandardService : Stopping service [Tomcat]
+2023-09-28 16:28:29,307 INFO  [main] ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-28 16:28:29,328 ERROR [main] SpringApplication : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: ${DB_DRIVER}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:550)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at hw34.springdata.Main.main(Main.java:11)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: ${DB_DRIVER}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:659)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:647)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: ${DB_DRIVER}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	... 35 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: ${DB_DRIVER}
+	at org.springframework.util.Assert.state(Assert.java:97)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:175)
+	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:55)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 36 common frames omitted
+2023-09-28 16:29:19,126 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 17404 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 16:29:19,128 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 16:29:19,608 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 16:29:19,624 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-09-28 16:29:20,113 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 16:29:20,121 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 16:29:20,121 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 16:29:20,212 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 16:29:20,213 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1037 ms
+2023-09-28 16:29:20,316 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 16:29:20,425 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@73a0f2b
+2023-09-28 16:29:20,427 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 16:29:20,470 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 16:29:20,517 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 16:29:20,518 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 16:29:20,638 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 16:29:20,744 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 16:29:20,857 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 16:29:21,023 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 16:29:21,027 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 16:29:21,055 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 16:29:21,382 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 16:29:21,391 INFO  [main] Main : Started Main in 2.616 seconds (process running for 2.891)
+2023-09-28 16:40:18,623 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 16:40:18,625 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 16:40:18,628 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 16:40:27,961 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 9356 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 16:40:27,963 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 16:40:28,376 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 16:40:28,392 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-09-28 16:40:28,867 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 16:40:28,875 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 16:40:28,875 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 16:40:28,969 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 16:40:28,970 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 968 ms
+2023-09-28 16:40:29,098 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 16:40:29,210 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6d6d480c
+2023-09-28 16:40:29,212 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 16:40:29,252 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 16:40:29,293 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 16:40:29,294 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 16:40:29,410 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 16:40:29,515 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 16:40:29,737 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 16:40:30,206 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 16:40:30,207 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 16:40:30,229 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 16:40:30,546 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 16:40:30,555 INFO  [main] Main : Started Main in 2.916 seconds (process running for 3.171)
+2023-09-28 16:54:27,261 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 16:54:27,264 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 16:54:27,267 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 16:54:33,527 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 3992 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 16:54:33,528 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 16:54:33,974 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 16:54:34,028 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2023-09-28 16:54:34,518 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 16:54:34,526 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 16:54:34,527 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 16:54:34,613 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 16:54:34,614 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1048 ms
+2023-09-28 16:54:34,740 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 16:54:34,851 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3b353651
+2023-09-28 16:54:34,852 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 16:54:34,903 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 16:54:34,950 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 16:54:34,952 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 16:54:35,087 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 16:54:35,188 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 16:54:35,413 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 16:54:35,839 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 16:54:35,841 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 16:54:35,867 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 16:54:36,383 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 16:54:36,391 INFO  [main] Main : Started Main in 3.191 seconds (process running for 3.452)
+2023-09-28 18:15:13,069 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:15:13,071 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 18:15:13,073 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 18:17:51,721 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 8904 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 18:17:51,726 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 18:17:52,167 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 18:17:52,221 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2023-09-28 18:17:52,698 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 18:17:52,713 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 18:17:52,713 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 18:17:52,795 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 18:17:52,795 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1034 ms
+2023-09-28 18:17:52,913 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 18:17:53,007 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@48a2db72
+2023-09-28 18:17:53,010 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 18:17:53,041 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 18:17:53,081 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 18:17:53,083 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 18:17:53,190 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:17:53,290 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 18:17:53,466 ERROR [main] LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Association 'hw34.springdata.entity.Order.products' targets the type 'java.lang.Long' which is not an '@Entity' type
+2023-09-28 18:17:53,467 WARN  [main] AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'hw34.springdata.entity.Order.products' targets the type 'java.lang.Long' which is not an '@Entity' type
+2023-09-28 18:17:53,467 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 18:17:53,469 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 18:17:53,472 INFO  [main] StandardService : Stopping service [Tomcat]
+2023-09-28 18:17:53,480 INFO  [main] ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-28 18:17:53,494 ERROR [main] SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'hw34.springdata.entity.Order.products' targets the type 'java.lang.Long' which is not an '@Entity' type
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at hw34.springdata.Main.main(Main.java:11)
+Caused by: org.hibernate.AnnotationException: Association 'hw34.springdata.entity.Order.products' targets the type 'java.lang.Long' which is not an '@Entity' type
+	at org.hibernate.boot.model.internal.CollectionBinder.detectManyToManyProblems(CollectionBinder.java:2484)
+	at org.hibernate.boot.model.internal.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:2079)
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1550)
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1534)
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1857)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1814)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:328)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+2023-09-28 18:21:21,832 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 1844 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 18:21:21,834 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 18:21:22,289 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 18:21:22,352 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2023-09-28 18:21:22,833 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 18:21:22,849 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 18:21:22,849 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 18:21:22,933 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 18:21:22,934 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
+2023-09-28 18:21:23,047 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 18:21:23,166 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5995851e
+2023-09-28 18:21:23,167 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 18:21:23,208 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 18:21:23,257 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 18:21:23,259 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 18:21:23,386 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:21:23,486 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 18:21:23,673 ERROR [main] LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Association 'hw34.springdata.entity.Order.products' targets the type 'java.lang.Long' which is not an '@Entity' type
+2023-09-28 18:21:23,674 WARN  [main] AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'hw34.springdata.entity.Order.products' targets the type 'java.lang.Long' which is not an '@Entity' type
+2023-09-28 18:21:23,674 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 18:21:23,677 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 18:21:23,680 INFO  [main] StandardService : Stopping service [Tomcat]
+2023-09-28 18:21:23,690 INFO  [main] ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-28 18:21:23,706 ERROR [main] SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'hw34.springdata.entity.Order.products' targets the type 'java.lang.Long' which is not an '@Entity' type
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at hw34.springdata.Main.main(Main.java:11)
+Caused by: org.hibernate.AnnotationException: Association 'hw34.springdata.entity.Order.products' targets the type 'java.lang.Long' which is not an '@Entity' type
+	at org.hibernate.boot.model.internal.CollectionBinder.detectManyToManyProblems(CollectionBinder.java:2484)
+	at org.hibernate.boot.model.internal.CollectionBinder.bindManyToManySecondPass(CollectionBinder.java:2079)
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1550)
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1534)
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1857)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1814)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:328)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+2023-09-28 18:26:16,829 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 6800 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 18:26:16,831 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 18:26:17,269 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 18:26:17,327 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2023-09-28 18:26:17,857 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 18:26:17,865 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 18:26:17,865 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 18:26:17,954 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 18:26:17,955 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1086 ms
+2023-09-28 18:26:18,088 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 18:26:18,218 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5995851e
+2023-09-28 18:26:18,220 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 18:26:18,267 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 18:26:18,309 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 18:26:18,310 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 18:26:18,425 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:26:18,534 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 18:26:18,762 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:26:19,191 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 18:26:19,193 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:26:19,394 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 18:26:19,710 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 18:26:19,720 INFO  [main] Main : Started Main in 3.219 seconds (process running for 3.476)
+2023-09-28 18:26:28,162 INFO  [http-nio-8080-exec-1] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 18:26:28,163 INFO  [http-nio-8080-exec-1] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 18:26:28,163 INFO  [http-nio-8080-exec-1] DispatcherServlet : Completed initialization in 0 ms
+2023-09-28 18:26:53,694 ERROR [http-nio-8080-exec-2] [dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class org.hibernate.collection.spi.PersistentSet cannot be cast to class java.util.List (org.hibernate.collection.spi.PersistentSet is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')] with root cause
+java.lang.ClassCastException: class org.hibernate.collection.spi.PersistentSet cannot be cast to class java.util.List (org.hibernate.collection.spi.PersistentSet is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')
+	at hw34.springdata.service.OrderServiceDefault.getAllProductsByOrderId(OrderServiceDefault.java:75)
+	at hw34.springdata.controller.OrderController.updateOrderById(OrderController.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-28 18:29:22,157 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:29:22,159 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 18:29:22,163 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 18:29:29,107 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 536 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 18:29:29,109 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 18:29:29,569 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 18:29:29,623 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2023-09-28 18:29:30,138 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 18:29:30,148 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 18:29:30,148 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 18:29:30,238 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 18:29:30,238 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1091 ms
+2023-09-28 18:29:30,363 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 18:29:30,465 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5995851e
+2023-09-28 18:29:30,466 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 18:29:30,513 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 18:29:30,554 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 18:29:30,556 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 18:29:30,676 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:29:30,783 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 18:29:31,067 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:29:31,523 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 18:29:31,526 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:29:31,731 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 18:29:32,048 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 18:29:32,058 INFO  [main] Main : Started Main in 3.28 seconds (process running for 3.541)
+2023-09-28 18:29:44,116 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 18:29:44,117 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 18:29:44,118 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 0 ms
+2023-09-28 18:36:32,965 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:36:32,967 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 18:36:32,970 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 18:36:45,375 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 10132 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 18:36:45,377 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 18:36:45,823 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 18:36:45,877 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2023-09-28 18:36:46,354 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 18:36:46,361 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 18:36:46,362 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 18:36:46,445 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 18:36:46,446 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1032 ms
+2023-09-28 18:36:46,551 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 18:36:46,669 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5995851e
+2023-09-28 18:36:46,671 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 18:36:46,711 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 18:36:46,754 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 18:36:46,756 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 18:36:46,871 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:36:46,979 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 18:36:47,210 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:36:47,651 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 18:36:47,653 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:36:47,863 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 18:36:48,156 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 18:36:48,165 INFO  [main] Main : Started Main in 3.116 seconds (process running for 3.395)
+2023-09-28 18:36:59,313 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 18:36:59,313 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 18:36:59,314 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 18:37:30,712 ERROR [http-nio-8080-exec-9] [dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null] with root cause
+java.lang.IllegalArgumentException: The given id must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:204)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:301)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244)
+	at jdk.proxy2/jdk.proxy2.$Proxy119.findById(Unknown Source)
+	at hw34.springdata.service.ProductServiceDefault.getProdById(ProductServiceDefault.java:23)
+	at hw34.springdata.service.OrderServiceDefault.createOrder(OrderServiceDefault.java:29)
+	at hw34.springdata.controller.OrderController.addNewProduct(OrderController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-28 18:38:19,429 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:38:19,431 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 18:38:19,435 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 18:38:26,015 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 13848 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 18:38:26,016 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 18:38:26,488 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 18:38:26,547 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2023-09-28 18:38:27,046 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 18:38:27,057 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 18:38:27,057 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 18:38:27,152 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 18:38:27,152 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1096 ms
+2023-09-28 18:38:27,291 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 18:38:27,399 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5995851e
+2023-09-28 18:38:27,401 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 18:38:27,443 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 18:38:27,480 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 18:38:27,482 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 18:38:27,596 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:38:27,695 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 18:38:27,912 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:38:28,413 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 18:38:28,416 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:38:28,678 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 18:38:29,091 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 18:38:29,098 INFO  [main] Main : Started Main in 3.413 seconds (process running for 3.671)
+2023-09-28 18:38:54,203 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 18:38:54,203 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 18:38:54,204 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 18:45:24,663 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:45:24,665 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 18:45:24,668 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 18:45:31,140 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 16992 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 18:45:31,142 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 18:45:31,586 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 18:45:31,647 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2023-09-28 18:45:32,126 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 18:45:32,134 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 18:45:32,134 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 18:45:32,227 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 18:45:32,227 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1048 ms
+2023-09-28 18:45:32,350 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 18:45:32,444 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@21c747a
+2023-09-28 18:45:32,446 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 18:45:32,483 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 18:45:32,525 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 18:45:32,526 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 18:45:32,646 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:45:32,748 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 18:45:32,968 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:45:33,407 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 18:45:33,409 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:45:33,623 WARN  [main] AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes\hw34\springdata\controller\OrderController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'orderServiceDefault' defined in file [E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes\hw34\springdata\service\OrderServiceDefault.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'orderRepository' defined in hw34.springdata.repo.OrderRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); Reason: Failed to create query for method public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); No property 'moreThan' found for type 'Double'; Traversed path: Order.cost
+2023-09-28 18:45:33,624 INFO  [main] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:45:33,625 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 18:45:33,628 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 18:45:33,629 INFO  [main] StandardService : Stopping service [Tomcat]
+2023-09-28 18:45:33,637 INFO  [main] ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-28 18:45:33,648 ERROR [main] SpringApplication : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes\hw34\springdata\controller\OrderController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'orderServiceDefault' defined in file [E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes\hw34\springdata\service\OrderServiceDefault.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'orderRepository' defined in hw34.springdata.repo.OrderRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); Reason: Failed to create query for method public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); No property 'moreThan' found for type 'Double'; Traversed path: Order.cost
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at hw34.springdata.Main.main(Main.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceDefault' defined in file [E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes\hw34\springdata\service\OrderServiceDefault.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'orderRepository' defined in hw34.springdata.repo.OrderRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); Reason: Failed to create query for method public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); No property 'moreThan' found for type 'Double'; Traversed path: Order.cost
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository' defined in hw34.springdata.repo.OrderRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); Reason: Failed to create query for method public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); No property 'moreThan' found for type 'Double'; Traversed path: Order.cost
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); Reason: Failed to create query for method public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); No property 'moreThan' found for type 'Double'; Traversed path: Order.cost
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:115)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:88)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:88)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:357)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:245)
+	at org.springframework.data.util.Lazy.get(Lazy.java:114)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List hw34.springdata.repo.OrderRepository.findByCostMoreThan(java.lang.Double); No property 'moreThan' found for type 'Double'; Traversed path: Order.cost
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:124)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:258)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:111)
+	... 56 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'moreThan' found for type 'Double'; Traversed path: Order.cost
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:405)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:381)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:415)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:438)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:438)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:381)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:334)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:316)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:299)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:242)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:243)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:372)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:373)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:96)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:100)
+	... 60 common frames omitted
+2023-09-28 18:46:04,125 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 5140 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 18:46:04,127 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 18:46:04,585 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 18:46:04,636 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2023-09-28 18:46:05,150 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 18:46:05,159 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 18:46:05,159 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 18:46:05,251 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 18:46:05,251 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1085 ms
+2023-09-28 18:46:05,386 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 18:46:05,512 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@51bddd98
+2023-09-28 18:46:05,514 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 18:46:05,557 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 18:46:05,597 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 18:46:05,599 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 18:46:05,719 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:46:05,825 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 18:46:06,058 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:46:06,489 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 18:46:06,491 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:46:06,741 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 18:46:07,030 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 18:46:07,039 INFO  [main] Main : Started Main in 3.232 seconds (process running for 3.485)
+2023-09-28 18:50:04,355 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:50:04,357 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 18:50:04,360 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 18:50:10,712 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 9308 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 18:50:10,713 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 18:50:11,162 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 18:50:11,224 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2023-09-28 18:50:11,719 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 18:50:11,727 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 18:50:11,727 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 18:50:11,809 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 18:50:11,809 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1059 ms
+2023-09-28 18:50:11,936 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 18:50:12,067 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@29f38091
+2023-09-28 18:50:12,069 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 18:50:12,114 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 18:50:12,154 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 18:50:12,155 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 18:50:12,265 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:50:12,365 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 18:50:12,599 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 18:50:13,025 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 18:50:13,027 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 18:50:13,343 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 18:50:13,631 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 18:50:13,641 INFO  [main] Main : Started Main in 3.257 seconds (process running for 3.515)
+2023-09-28 19:15:06,872 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:15:06,875 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:15:06,878 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:15:13,782 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 2636 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:15:13,784 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:15:14,253 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:15:14,317 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:15:14,812 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:15:14,821 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:15:14,821 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:15:14,904 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:15:14,904 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1081 ms
+2023-09-28 19:15:15,027 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:15:15,149 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@29f38091
+2023-09-28 19:15:15,150 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:15:15,195 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:15:15,239 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:15:15,241 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:15:15,363 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:15:15,471 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:15:15,696 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:15:16,124 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:15:16,126 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:15:16,393 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:15:16,604 WARN  [main] AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'orderController' method 
+hw34.springdata.controller.OrderController#findByCostLessThan(Double)
+to {GET [/orders]}: There is already 'orderController' bean method
+hw34.springdata.controller.OrderController#getAllOrders() mapped.
+2023-09-28 19:15:16,604 INFO  [main] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:15:16,606 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:15:16,609 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:15:16,611 INFO  [main] StandardService : Stopping service [Tomcat]
+2023-09-28 19:15:16,623 INFO  [main] ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-28 19:15:16,644 ERROR [main] SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'orderController' method 
+hw34.springdata.controller.OrderController#findByCostLessThan(Double)
+to {GET [/orders]}: There is already 'orderController' bean method
+hw34.springdata.controller.OrderController#getAllOrders() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at hw34.springdata.Main.main(Main.java:11)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderController' method 
+hw34.springdata.controller.OrderController#findByCostLessThan(Double)
+to {GET [/orders]}: There is already 'orderController' bean method
+hw34.springdata.controller.OrderController#getAllOrders() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:441)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+2023-09-28 19:15:59,109 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 9816 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:15:59,111 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:15:59,571 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:15:59,635 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:16:00,122 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:16:00,130 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:16:00,130 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:16:00,219 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:16:00,219 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1071 ms
+2023-09-28 19:16:00,327 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:16:00,443 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@5b40de43
+2023-09-28 19:16:00,445 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:16:00,486 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:16:00,532 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:16:00,534 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:16:00,653 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:16:00,757 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:16:00,970 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:16:01,415 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:16:01,417 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:16:01,723 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:16:01,915 WARN  [main] AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'orderController' method 
+hw34.springdata.controller.OrderController#findOrdersByCostLessThan(Double)
+to {GET [/orders]}: There is already 'orderController' bean method
+hw34.springdata.controller.OrderController#getAllOrders() mapped.
+2023-09-28 19:16:01,916 INFO  [main] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:16:01,917 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:16:01,920 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:16:01,923 INFO  [main] StandardService : Stopping service [Tomcat]
+2023-09-28 19:16:01,934 INFO  [main] ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-28 19:16:01,952 ERROR [main] SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'orderController' method 
+hw34.springdata.controller.OrderController#findOrdersByCostLessThan(Double)
+to {GET [/orders]}: There is already 'orderController' bean method
+hw34.springdata.controller.OrderController#getAllOrders() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at hw34.springdata.Main.main(Main.java:11)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderController' method 
+hw34.springdata.controller.OrderController#findOrdersByCostLessThan(Double)
+to {GET [/orders]}: There is already 'orderController' bean method
+hw34.springdata.controller.OrderController#getAllOrders() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:441)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+2023-09-28 19:16:50,121 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 6076 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:16:50,123 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:16:50,609 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:16:50,669 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:16:51,157 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:16:51,165 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:16:51,165 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:16:51,241 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:16:51,241 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1081 ms
+2023-09-28 19:16:51,341 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:16:51,434 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@161dd92a
+2023-09-28 19:16:51,435 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:16:51,473 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:16:51,510 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:16:51,511 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:16:51,621 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:16:51,723 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:16:51,933 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:16:52,352 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:16:52,354 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:16:52,647 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:16:53,001 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 19:16:53,011 INFO  [main] Main : Started Main in 3.218 seconds (process running for 3.476)
+2023-09-28 19:17:19,345 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 19:17:19,345 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 19:17:19,346 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 19:18:32,267 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:18:32,269 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:18:32,271 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:18:37,497 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 8768 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:18:37,499 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:18:37,922 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:18:37,976 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:18:38,449 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:18:38,461 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:18:38,461 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:18:38,542 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:18:38,543 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1006 ms
+2023-09-28 19:18:38,659 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:18:38,752 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@29f38091
+2023-09-28 19:18:38,756 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:18:38,786 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:18:38,823 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:18:38,824 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:18:38,936 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:18:39,037 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:18:39,250 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:18:39,690 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:18:39,692 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:18:39,981 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:18:40,180 WARN  [main] AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'orderController' method 
+hw34.springdata.controller.OrderController#findOrdersByCostLessThan(Double)
+to {GET [/orders/cost]}: There is already 'orderController' bean method
+hw34.springdata.controller.OrderController#findOrdersByCostGreaterThan(Double) mapped.
+2023-09-28 19:18:40,181 INFO  [main] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:18:40,182 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:18:40,186 INFO  [main] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:18:40,188 INFO  [main] StandardService : Stopping service [Tomcat]
+2023-09-28 19:18:40,200 INFO  [main] ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-28 19:18:40,217 ERROR [main] SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'orderController' method 
+hw34.springdata.controller.OrderController#findOrdersByCostLessThan(Double)
+to {GET [/orders/cost]}: There is already 'orderController' bean method
+hw34.springdata.controller.OrderController#findOrdersByCostGreaterThan(Double) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at hw34.springdata.Main.main(Main.java:11)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderController' method 
+hw34.springdata.controller.OrderController#findOrdersByCostLessThan(Double)
+to {GET [/orders/cost]}: There is already 'orderController' bean method
+hw34.springdata.controller.OrderController#findOrdersByCostGreaterThan(Double) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:441)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+2023-09-28 19:25:44,003 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 16024 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:25:44,004 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:25:44,440 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:25:44,496 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:25:44,981 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:25:44,989 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:25:44,990 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:25:45,078 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:25:45,078 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1037 ms
+2023-09-28 19:25:45,187 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:25:45,304 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@161dd92a
+2023-09-28 19:25:45,307 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:25:45,348 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:25:45,390 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:25:45,392 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:25:45,520 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:25:45,629 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:25:45,848 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:25:46,278 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:25:46,280 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:25:46,569 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:25:46,900 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 19:25:46,908 INFO  [main] Main : Started Main in 3.243 seconds (process running for 3.504)
+2023-09-28 19:26:17,230 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 19:26:17,230 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 19:26:17,231 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 19:28:01,790 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:28:01,792 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:28:01,795 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:28:08,164 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 7692 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:28:08,165 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:28:08,610 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:28:08,667 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:28:09,161 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:28:09,169 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:28:09,169 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:28:09,260 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:28:09,260 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1057 ms
+2023-09-28 19:28:09,380 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:28:09,481 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@161dd92a
+2023-09-28 19:28:09,483 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:28:09,527 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:28:09,573 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:28:09,575 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:28:09,706 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:28:09,814 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:28:10,041 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:28:10,472 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:28:10,474 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:28:10,760 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:28:11,042 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 19:28:11,050 INFO  [main] Main : Started Main in 3.209 seconds (process running for 3.465)
+2023-09-28 19:28:13,962 INFO  [http-nio-8080-exec-1] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 19:28:13,963 INFO  [http-nio-8080-exec-1] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 19:28:13,966 INFO  [http-nio-8080-exec-1] DispatcherServlet : Completed initialization in 2 ms
+2023-09-28 19:29:09,990 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:29:09,992 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:29:09,996 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:29:16,347 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 14060 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:29:16,348 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:29:16,816 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:29:16,879 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:29:17,412 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:29:17,419 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:29:17,419 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:29:17,499 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:29:17,500 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1111 ms
+2023-09-28 19:29:17,614 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:29:17,717 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@161dd92a
+2023-09-28 19:29:17,718 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:29:17,760 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:29:17,801 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:29:17,803 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:29:17,929 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:29:18,035 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:29:18,269 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:29:18,693 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:29:18,695 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:29:18,995 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:29:19,347 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 19:29:19,357 INFO  [main] Main : Started Main in 3.334 seconds (process running for 3.591)
+2023-09-28 19:29:23,548 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 19:29:23,548 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 19:29:23,549 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 19:30:23,717 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:30:23,720 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:30:23,723 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:30:34,339 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 9380 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:30:34,341 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:30:34,790 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:30:34,852 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:30:35,334 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:30:35,344 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:30:35,344 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:30:35,432 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:30:35,432 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1053 ms
+2023-09-28 19:30:35,565 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:30:35,685 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@161dd92a
+2023-09-28 19:30:35,687 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:30:35,726 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:30:35,778 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:30:35,781 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:30:35,911 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:30:36,016 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:30:36,221 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:30:36,655 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:30:36,657 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:30:36,956 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:30:37,292 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 19:30:37,301 INFO  [main] Main : Started Main in 3.29 seconds (process running for 3.551)
+2023-09-28 19:30:40,089 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 19:30:40,089 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 19:30:40,090 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 19:31:48,870 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:31:48,872 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:31:48,875 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:31:55,598 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 17592 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:31:55,599 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:31:56,048 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:31:56,110 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:31:56,631 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:31:56,639 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:31:56,639 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:31:56,731 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:31:56,731 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1092 ms
+2023-09-28 19:31:56,866 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:31:56,987 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@161dd92a
+2023-09-28 19:31:56,989 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:31:57,030 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:31:57,070 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:31:57,072 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:31:57,194 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:31:57,297 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:31:57,524 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:31:57,965 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:31:57,967 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:31:58,261 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:31:58,584 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 19:31:58,594 INFO  [main] Main : Started Main in 3.329 seconds (process running for 3.586)
+2023-09-28 19:32:01,951 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 19:32:01,952 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 19:32:01,953 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 19:32:42,152 WARN  [http-nio-8080-exec-3] DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'y' for method parameter type int is not present]
+2023-09-28 19:33:54,790 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:33:54,791 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:33:54,794 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:34:01,304 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 16280 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:34:01,306 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:34:01,755 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:34:01,815 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:34:02,280 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:34:02,294 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:34:02,294 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:34:02,376 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:34:02,376 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1034 ms
+2023-09-28 19:34:02,481 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:34:02,596 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@161dd92a
+2023-09-28 19:34:02,598 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:34:02,640 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:34:02,683 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:34:02,685 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:34:02,807 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:34:02,913 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:34:03,141 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:34:03,589 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:34:03,591 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:34:03,883 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:34:04,246 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 19:34:04,255 INFO  [main] Main : Started Main in 3.278 seconds (process running for 3.533)
+2023-09-28 19:34:07,763 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 19:34:07,763 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 19:34:07,764 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 19:36:00,040 WARN  [http-nio-8080-exec-8] DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "more&more=1500"]
+2023-09-28 19:50:43,287 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:50:43,290 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:50:43,294 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:50:53,053 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 11380 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:50:53,054 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:50:53,507 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:50:53,570 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:50:54,059 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:50:54,071 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:50:54,071 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:50:54,163 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:50:54,163 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1070 ms
+2023-09-28 19:50:54,292 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:50:54,437 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@77d4ac52
+2023-09-28 19:50:54,439 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:50:54,483 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:50:54,530 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:50:54,533 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:50:54,682 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:50:54,792 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:50:55,027 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:50:55,469 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:50:55,471 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:50:55,762 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:50:56,118 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 19:50:56,128 INFO  [main] Main : Started Main in 3.41 seconds (process running for 3.669)
+2023-09-28 19:51:06,632 INFO  [http-nio-8080-exec-1] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 19:51:06,632 INFO  [http-nio-8080-exec-1] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 19:51:06,633 INFO  [http-nio-8080-exec-1] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 19:51:13,791 WARN  [http-nio-8080-exec-2] DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]
+2023-09-28 19:52:08,829 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:52:08,831 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 19:52:08,834 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 19:52:15,138 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 2756 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 19:52:15,140 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 19:52:15,591 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 19:52:15,657 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2023-09-28 19:52:16,143 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 19:52:16,150 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 19:52:16,151 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 19:52:16,231 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 19:52:16,232 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1053 ms
+2023-09-28 19:52:16,343 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 19:52:16,439 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@235b4cb8
+2023-09-28 19:52:16,441 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 19:52:16,474 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 19:52:16,508 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 19:52:16,509 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 19:52:16,608 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:52:16,707 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 19:52:16,925 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 19:52:17,351 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 19:52:17,353 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 19:52:17,637 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 19:52:18,000 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 19:52:18,010 INFO  [main] Main : Started Main in 3.203 seconds (process running for 3.463)
+2023-09-28 19:52:21,238 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 19:52:21,238 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 19:52:21,239 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 20:00:15,201 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:00:15,203 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 20:00:15,206 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 20:00:21,450 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 1096 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 20:00:21,452 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 20:00:21,895 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 20:00:21,961 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2023-09-28 20:00:22,494 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 20:00:22,507 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 20:00:22,508 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 20:00:22,589 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 20:00:22,589 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1100 ms
+2023-09-28 20:00:22,733 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 20:00:22,848 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@235b4cb8
+2023-09-28 20:00:22,852 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 20:00:22,893 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 20:00:22,933 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 20:00:22,934 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 20:00:23,047 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:00:23,153 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 20:00:23,383 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:00:23,818 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 20:00:23,821 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:00:24,112 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 20:00:24,454 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 20:00:24,463 INFO  [main] Main : Started Main in 3.345 seconds (process running for 3.6)
+2023-09-28 20:00:28,914 INFO  [http-nio-8080-exec-1] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 20:00:28,914 INFO  [http-nio-8080-exec-1] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 20:00:28,915 INFO  [http-nio-8080-exec-1] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 20:01:05,086 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:01:05,088 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 20:01:05,092 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 20:01:11,354 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 11388 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 20:01:11,355 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 20:01:11,802 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 20:01:11,858 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2023-09-28 20:01:12,337 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 20:01:12,347 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 20:01:12,347 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 20:01:12,452 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 20:01:12,453 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1058 ms
+2023-09-28 20:01:12,578 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 20:01:12,673 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@77d4ac52
+2023-09-28 20:01:12,674 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 20:01:12,712 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 20:01:12,756 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 20:01:12,757 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 20:01:12,872 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:01:12,970 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 20:01:13,183 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:01:13,636 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 20:01:13,638 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:01:13,951 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 20:01:14,319 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 20:01:14,327 INFO  [main] Main : Started Main in 3.309 seconds (process running for 3.57)
+2023-09-28 20:01:24,869 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:01:24,871 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 20:01:24,874 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 20:01:31,386 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 2120 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 20:01:31,388 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 20:01:31,839 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 20:01:31,899 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2023-09-28 20:01:32,381 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 20:01:32,389 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 20:01:32,389 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 20:01:32,473 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 20:01:32,474 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1050 ms
+2023-09-28 20:01:32,590 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 20:01:32,687 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@235b4cb8
+2023-09-28 20:01:32,689 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 20:01:32,727 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 20:01:32,766 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 20:01:32,767 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 20:01:32,880 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:01:32,976 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 20:01:33,199 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:01:33,628 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 20:01:33,631 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:01:33,966 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 20:01:34,335 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 20:01:34,345 INFO  [main] Main : Started Main in 3.28 seconds (process running for 3.538)
+2023-09-28 20:01:41,946 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 20:01:41,946 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 20:01:41,947 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 20:02:25,509 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:02:25,511 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 20:02:25,515 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 20:02:32,035 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 9668 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 20:02:32,036 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 20:02:32,485 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 20:02:32,544 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2023-09-28 20:02:33,028 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 20:02:33,036 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 20:02:33,036 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 20:02:33,129 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 20:02:33,130 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1056 ms
+2023-09-28 20:02:33,244 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 20:02:33,366 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@235b4cb8
+2023-09-28 20:02:33,368 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 20:02:33,413 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 20:02:33,453 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 20:02:33,455 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 20:02:33,578 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:02:33,684 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 20:02:33,916 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:02:34,364 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 20:02:34,366 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:02:34,651 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 20:02:34,993 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 20:02:35,001 INFO  [main] Main : Started Main in 3.288 seconds (process running for 3.542)
+2023-09-28 20:02:38,819 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 20:02:38,820 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 20:02:38,820 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 0 ms
+2023-09-28 20:03:04,733 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:03:04,735 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 20:03:04,739 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 20:03:11,421 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 10544 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 20:03:11,423 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 20:03:11,869 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 20:03:11,930 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2023-09-28 20:03:12,407 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 20:03:12,420 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 20:03:12,420 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 20:03:12,498 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 20:03:12,498 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1036 ms
+2023-09-28 20:03:12,604 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 20:03:12,710 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@77d4ac52
+2023-09-28 20:03:12,711 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 20:03:12,763 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 20:03:12,808 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 20:03:12,810 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 20:03:12,937 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:03:13,045 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 20:03:13,291 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:03:13,727 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 20:03:13,729 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:03:14,023 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 20:03:14,408 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 20:03:14,417 INFO  [main] Main : Started Main in 3.319 seconds (process running for 3.575)
+2023-09-28 20:03:18,565 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 20:03:18,565 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 20:03:18,566 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 20:18:55,769 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:18:55,771 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 20:18:55,775 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 20:19:02,462 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 9268 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 20:19:02,464 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 20:19:02,923 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 20:19:02,981 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2023-09-28 20:19:03,516 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 20:19:03,523 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 20:19:03,524 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 20:19:03,604 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 20:19:03,604 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1101 ms
+2023-09-28 20:19:03,742 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 20:19:03,846 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@235b4cb8
+2023-09-28 20:19:03,850 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 20:19:03,886 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 20:19:03,926 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 20:19:03,927 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 20:19:04,041 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:19:04,147 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 20:19:04,374 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:19:04,814 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 20:19:04,816 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:19:05,149 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 20:19:05,435 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 20:19:05,443 INFO  [main] Main : Started Main in 3.309 seconds (process running for 3.592)
+2023-09-28 20:19:13,961 INFO  [http-nio-8080-exec-1] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 20:19:13,961 INFO  [http-nio-8080-exec-1] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 20:19:13,962 INFO  [http-nio-8080-exec-1] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 20:21:17,997 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:21:17,998 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 20:21:18,002 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-09-28 20:21:24,205 INFO  [main] Main : Starting Main using Java 17.0.3.1 with PID 17588 (E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data\target\classes started by Пользователь in E:\JavaProjects\HillelJavaHomeworks\hw-34-spring-data)
+2023-09-28 20:21:24,207 INFO  [main] Main : No active profile set, falling back to 1 default profile: "default"
+2023-09-28 20:21:24,645 INFO  [main] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-28 20:21:24,705 INFO  [main] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2023-09-28 20:21:25,222 INFO  [main] TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-09-28 20:21:25,230 INFO  [main] StandardService : Starting service [Tomcat]
+2023-09-28 20:21:25,230 INFO  [main] StandardEngine : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-28 20:21:25,320 INFO  [main] [/] : Initializing Spring embedded WebApplicationContext
+2023-09-28 20:21:25,320 INFO  [main] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1076 ms
+2023-09-28 20:21:25,467 INFO  [main] HikariDataSource : HikariPool-1 - Starting...
+2023-09-28 20:21:25,577 INFO  [main] HikariPool : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@235b4cb8
+2023-09-28 20:21:25,579 INFO  [main] HikariDataSource : HikariPool-1 - Start completed.
+2023-09-28 20:21:25,615 INFO  [main] LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-28 20:21:25,652 INFO  [main] Version : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-28 20:21:25,654 INFO  [main] Environment : HHH000406: Using bytecode reflection optimizer
+2023-09-28 20:21:25,752 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:21:25,852 INFO  [main] SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-28 20:21:26,089 INFO  [main] BytecodeProviderInitiator : HHH000021: Bytecode provider name : bytebuddy
+2023-09-28 20:21:26,529 INFO  [main] JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-28 20:21:26,531 INFO  [main] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:21:26,823 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-28 20:21:27,161 INFO  [main] TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-28 20:21:27,172 INFO  [main] Main : Started Main in 3.297 seconds (process running for 3.558)
+2023-09-28 20:21:30,123 INFO  [http-nio-8080-exec-2] [/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-28 20:21:30,124 INFO  [http-nio-8080-exec-2] DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+2023-09-28 20:21:30,125 INFO  [http-nio-8080-exec-2] DispatcherServlet : Completed initialization in 1 ms
+2023-09-28 20:23:15,407 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-28 20:23:15,409 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-09-28 20:23:15,412 INFO  [SpringApplicationShutdownHook] HikariDataSource : HikariPool-1 - Shutdown completed.
