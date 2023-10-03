@@ -1,0 +1,20 @@
+spring:
+  datasource:
+      driver-class-name: ${DB_DRIVER}
+      url: ${DB_CONN_URL}
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+  jpa:
+    show-sql: true
+
+debug: true
+
+logging:
+  file:
+    name: logs/dev_log.log
+  pattern:
+      console: "%d %-5level %logger : %msg%n"
+      file: "%d %-5level [%thread] %logger{0} : %msg%n"
+  level:
+    hw33.springboot: INFO
+    org.springframework.web: INFO
