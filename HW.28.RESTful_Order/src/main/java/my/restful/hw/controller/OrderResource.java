@@ -1,25 +1,25 @@
-package my.restful.hw;
+package my.restful.hw.controller;
 
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import my.restful.hw.model.Order;
-import my.restful.hw.service.OrderService;
+import my.restful.hw.repo.OrderRepo;
 
 
 import java.util.List;
 
 @Path("orders")
-public class OrderRepository {
+public class OrderResource {
 
     @Inject
-    private OrderService orderService;
+    private OrderRepo orderRepo;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Order> getAll() {
-        return orderService.getAllOrders();
+        return orderRepo.getAllOrders();
     }
 
     @GET
@@ -28,7 +28,7 @@ public class OrderRepository {
     public Order getOrderById(@PathParam("id") Integer id){
 
         if(id != null)
-            return orderService.getOrderById(id);
+            return orderRepo.getOrderById(id);
         return null;
     }
 
@@ -36,6 +36,6 @@ public class OrderRepository {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Order add(Order newOrd) {
-        return orderService.addOrder(newOrd);
+        return orderRepo.addOrder(newOrd);
     }
 }

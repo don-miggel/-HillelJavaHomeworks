@@ -1,12 +1,13 @@
-package my.restful.hw.service;
+package my.restful.hw.repo;
 
 import my.restful.hw.model.Order;
-import my.restful.hw.model.Product;
+import org.jvnet.hk2.annotations.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderServiceImpl implements OrderService{
+@Service
+public class OrderRepoImpl implements OrderRepo{
 
     private List<Order> orders;
 
