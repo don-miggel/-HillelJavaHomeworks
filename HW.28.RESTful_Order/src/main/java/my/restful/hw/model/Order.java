@@ -15,6 +15,7 @@ public class Order {
     private String id;
     private LocalDate date;
 
+    @JsonProperty
     private List<Product> products;
 
 
