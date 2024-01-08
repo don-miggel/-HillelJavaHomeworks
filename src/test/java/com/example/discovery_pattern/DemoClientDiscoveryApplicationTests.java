@@ -1,4 +1,4 @@
-package com.example.democlientdiscovery;
+package com.example.discovery_pattern;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
